@@ -21,10 +21,10 @@ class Config(object):
     MAIL_PORT = 465
     MAIL_USE_SSL = True
     MAIL_USE_TLS = False
-    MAIL_USERNAME = 'androidadvance@yahoo.com'
-    MAIL_PASSWORD = 'Parolagrea1'
-    DEFAULT_MAIL_SENDER = 'androidadvance@yahoo.com'
-    SECURITY_EMAIL_SENDER = 'androidadvance@yahoo.com'
+    MAIL_USERNAME = 'user@yahoo.com'
+    MAIL_PASSWORD = 'password'
+    DEFAULT_MAIL_SENDER = 'user@yahoo.com'
+    SECURITY_EMAIL_SENDER = 'password@yahoo.com'
 
 
 
