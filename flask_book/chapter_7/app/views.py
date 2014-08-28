@@ -2,6 +2,16 @@ import logging
 from flask import render_template, request, flash
 from models import *
 from forms import *
+import logging
+
+
+
+
+@app.before_first_request
+def before_first_request():
+    logging.info("-------------------- initializing everything ---------------------")
+    db.create_all()
+
 
 @app.route('/')
 @app.route('/index')

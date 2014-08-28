@@ -4,9 +4,19 @@ from models import *
 from forms import *
 from flask.ext.security import Security, login_required, logout_user
 from app import *
+import logging
+
+
 
 
 security = Security(app, user_datastore)
+
+@app.before_first_request
+def before_first_request():
+    logging.info("-------------------- initializing everything ---------------------")
+    db.create_all()
+
+
 
 @app.route('/')
 @app.route('/index')

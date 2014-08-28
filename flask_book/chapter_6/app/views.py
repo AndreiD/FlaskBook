@@ -1,6 +1,14 @@
 from flask import render_template, request
 from app import *
 from models import *
+import logging
+
+
+
+@app.before_first_request
+def before_first_request():
+    logging.info("-------------------- initializing everything ---------------------")
+    db.create_all()
 
 
 @app.route('/')
