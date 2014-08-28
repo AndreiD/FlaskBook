@@ -1,5 +1,8 @@
 {% if security.registerable or security.recoverable or security.confirmabled %}
 
+    {% if current_user.is_authenticated() %}
+        <li><a href="/admin">Admin</a></li>
+   {% endif %}
 
     {% if not request.path.endswith('login') %}
 
