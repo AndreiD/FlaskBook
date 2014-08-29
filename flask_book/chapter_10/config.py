@@ -31,7 +31,7 @@ class Config(object):
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql://flask_book:123123@188.226.150.116:13306/flask_book'
+    SQLALCHEMY_DATABASE_URI = 'mysql://user:pass@server_ip:server_port/db_name'
     DEBUG = False
 
 
